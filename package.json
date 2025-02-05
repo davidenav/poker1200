@@ -21,7 +21,7 @@
     "expo": "~52.0.23",
     "expo-status-bar": "~2.0.0",
     "react": "18.3.1",
-    "react-native": "0.76.5",
+    "react-native": "^0.76.6",
     "react-native-get-random-values": "^1.11.0",
     "react-native-safe-area-context": "^5.0.0",
     "react-native-screens": "^4.4.0",
@@ -32,6 +32,7 @@
     "@aws-amplify/backend": "^1.11.0",
     "@aws-amplify/backend-cli": "^1.4.5",
     "@babel/core": "^7.25.2",
+    "@react-native-community/cli": "latest",
     "@types/aws-lambda": "^8.10.146",
     "@types/react": "~18.3.12",
     "aws-cdk": "^2.173.4",
@@ -39,8 +40,7 @@
     "constructs": "^10.4.2",
     "esbuild": "^0.24.2",
     "tsx": "^4.19.2",
-    "typescript": "^5.7.2",
-    "@react-native-community/cli": "latest"
+    "typescript": "^5.7.2"
   },
   "private": true
 }
