@@ -14,16 +14,16 @@ Amplify.configure(resourceConfig, libraryOptions);
 const client = generateClient<Schema>();
 
 export const handler: PostConfirmationTriggerHandler = async (event) => {
-    const { data: user, errors } = await client.models.UserProfile.create({
-        email: event.request.userAttributes.email,
-        name: event.request.userAttributes.name,
-        profileOwner: `${event.request.userAttributes.sub}::${event.userName}`,
-    });
+  const { data: user, errors } = await client.models.UserProfile.create({
+    email: event.request.userAttributes.email,
+    name: event.request.userAttributes.name,
+    profileOwner: `${event.request.userAttributes.sub}::${event.userName}`,
+  });
 
-    await client.models.Player.create({
-        userProfileId: user?.email,
-        name: event.request.userAttributes.name,
-    });
+  await client.models.Player.create({
+    userProfileId: user?.email,
+    name: event.request.userAttributes.name,
+  });
 
   return event;
 };
